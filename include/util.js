@@ -212,12 +212,16 @@ Util.init_logging = function (level) {
     switch (level) {
         case 'debug':
             Util.Debug = function (msg) { console.log(msg); };
+            // fall through
         case 'info':
             Util.Info  = function (msg) { console.log(msg); };
+            // fall through
         case 'warn':
             Util.Warn  = function (msg) { console.warn(msg); };
+            // fall through
         case 'error':
             Util.Error = function (msg) { console.error(msg); };
+            // fall through
         case 'none':
             break;
         default:
